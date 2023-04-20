@@ -14,8 +14,8 @@ export class AppComponent {
 
   constructor(private methodIaService: MethodIaService) {}
 
-  test() {
-    this.methodIaService.callAPI(this.requestText)
+  sendChat() {
+    this.methodIaService.chat(this.requestText)
       .subscribe(response => {
         console.log(response)
 

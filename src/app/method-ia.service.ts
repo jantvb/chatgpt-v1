@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Configuration, OpenAIApi } from "openai";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +11,19 @@ export class MethodIaService {
 
   constructor(private http: HttpClient) { }
 
-  callAPI(inputData: string): Observable<any> {
+  chat(inputData: string): Observable<any> {
 
     // https://platform.openai.com/account/api-keys
 
     const configuration = new Configuration({
-      organization: "my-organization",
-      apiKey: 'my-key',
+      organization: environment.organization,
+      apiKey: environment.apiKey,
     });
     const openai = new OpenAIApi(configuration);
     
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer my-key',
+      Authorization: 'Bearer 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',
     });
 
     const request = {
