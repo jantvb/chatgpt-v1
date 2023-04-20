@@ -23,7 +23,7 @@ export class MethodIaService {
     
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer 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',
+      Authorization: `Bearer ${environment.apiKey}`,
     });
 
     const request = {
