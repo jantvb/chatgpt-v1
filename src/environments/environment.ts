@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  organization: 'org-J7Zw8KF9ntiDYFQPWwyr7TJW',
-  apiKey: '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'
+  organization: '',
+  apiKey: ''
 };
 
 /*
